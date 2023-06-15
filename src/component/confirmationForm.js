@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Chat from '../push_SDK/Chat';
 
 const ConfirmationForm = (props) => {
   const nameRef = useRef();
@@ -89,7 +90,7 @@ const ConfirmationForm = (props) => {
             />
           </label>
           <br />
-          <button className="formButton" type="submit">
+          <button className="formButton" type="submit" onClick={Chat}>
             Schedule
           </button>
           <button className="formButton" onClick={props.back}>
