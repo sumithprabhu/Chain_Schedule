@@ -1,7 +1,9 @@
-import React, { useRef, useState } from "react";
-import Chat from '../push_SDK/Chat';
+import { useRef, useState } from "react";
 
+import * as PushAPI from "@pushprotocol/restapi";
+import { useWeb3React } from "@web3-react/core";
 const ConfirmationForm = (props) => {
+
   const nameRef = useRef();
   const emailRef = useRef();
   const desRef = useRef();
@@ -9,6 +11,7 @@ const ConfirmationForm = (props) => {
   const nameN = useRef(null);
   const email = useRef(null);
   const desc = useRef(null);
+ 
 
   const [showConfirmation, setShowConfirmation] = useState(false);
 
@@ -27,6 +30,65 @@ const ConfirmationForm = (props) => {
       default:
         return;
     }
+  };
+
+
+  
+async function onc(){
+  const _signer= props.sig;
+  const user = await PushAPI.user.get({
+    account: "eip155:0x49403ae592C82fc3f861cD0b9738f7524Fb1F38C", env:'staging'});
+ console.log(_signer)
+ console.log(user)
+ const pgpDecryptedPvtKey = await PushAPI.chat.decryptPGPKey({
+  encryptedPGPPrivateKey: user.encryptedPrivateKey,
+  signer: _signer,
+  env:'staging'
+});
+// await PushAPI.chat.approve({
+//   status: "Approved",
+//   account: "0x49403ae592C82fc3f861cD0b9738f7524Fb1F38C",
+//   senderAddress: "0xe701C317d677F9C54ACf59b5a5dbaDCfAa0AF2e0", // receiver's address or chatId of a group
+// });
+// actual api
+const result=await PushAPI.chat.send({
+  messageContent: "Gm gm! It's me... Mario",
+  messageType: "Text", // can be "Text" | "Image" | "File" | "GIF"
+  receiverAddress: "eip155:0xe701C317d677F9C54ACf59b5a5dbaDCfAa0AF2e0",
+  signer: _signer,
+  pgpPrivateKey: pgpDecryptedPvtKey,
+  env: "staging",
+});
+console.log("result",result)
+}
+  const Chat = async () => {
+    
+    const _signer=props.sig;
+    const hell= await PushAPI.user.create({ env: "staging",signer: _signer, account: "eip155:0x49403ae592C82fc3f861cD0b9738f7524Fb1F38C" });
+    console.log("out",hell)
+    const user = await PushAPI.user.get({
+      account: "eip155:0x49403ae592C82fc3f861cD0b9738f7524Fb1F38C", env:'staging'});
+
+    // need to decrypt the encryptedPvtKey to pass in the api using helper function
+    const pgpDecryptedPvtKey = await PushAPI.chat.decryptPGPKey({
+      encryptedPGPPrivateKey: user.encryptedPrivateKey,
+      signer: _signer,
+      env:'staging'
+    });
+    // await PushAPI.chat.approve({
+    //   status: "Approved",
+    //   account: "0x49403ae592C82fc3f861cD0b9738f7524Fb1F38C",
+    //   senderAddress: "0xe701C317d677F9C54ACf59b5a5dbaDCfAa0AF2e0", // receiver's address or chatId of a group
+    // });
+    // actual api
+    await PushAPI.chat.send({
+      messageContent: "Gm gm! It's me... Mario",
+      messageType: "Text", // can be "Text" | "Image" | "File" | "GIF"
+      receiverAddress: "eip155:0xe701C317d677F9C54ACf59b5a5dbaDCfAa0AF2e0",
+      signer: _signer,
+      pgpPrivateKey: pgpDecryptedPvtKey,
+      env: "staging",
+    });
   };
 
   const formSubmit = (event) => {
@@ -90,7 +152,7 @@ const ConfirmationForm = (props) => {
             />
           </label>
           <br />
-          <button className="formButton" type="submit" onClick={Chat}>
+          <button className="formButton" type="submit" onClick={onc}>
             Schedule
           </button>
           <button className="formButton" onClick={props.back}>

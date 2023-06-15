@@ -4,6 +4,7 @@ import Chain from "./index";
 
 const Home = ({connectWallet,currentAccount}) => {
 function displayAccount(){
+ 
   if (currentAccount){
     let text=(currentAccount.slice(0,4)).concat("...",(currentAccount.slice(38)))
     return text
