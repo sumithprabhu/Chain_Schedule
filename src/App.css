@@ -59,9 +59,11 @@
   box-sizing: border-box;
 }
 
+
 .appContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   flex: 0 1 80%;
   height: 70vh;
@@ -72,6 +74,8 @@
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
+  /* margin-top: 110px; */
+  /* border-style: solid; */
 }
 
 .meetingIinfo {
@@ -482,8 +486,10 @@ textarea {
 
   .appContainer {
     flex: 0 1 99%;
-    margin-top: 3rem;
+    margin-top: 10px;
     height: 80%;
+    
+    
   }
 
   .iconParent:first-child {
@@ -493,6 +499,7 @@ textarea {
   .meetingIinfo {
     flex: 0 0 30% !important;
     height: 90%;
+    
   }
 
   .meetingTitle {
@@ -531,4 +538,7 @@ textarea {
     width: 46%;
     font-size: 1rem;
   }
+}
+.hello{
+  
 }
