@@ -1,72 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SuperChain Lottery
 
-## Available Scripts
+Chain Schedule is an innovative decentralized application (DApp) designed to simplify scheduling meetings and appointments. Chain Schedule offers a unique twist by leveraging wallet addresses as the primary source of contact. By integrating blockchain technology, Chain Schedule ensures secure and transparent communication between users.
 
-In the project directory, you can run:
+One of the standout features of Chain Schedule is its seamless push chat notification system. Users receive instant chat notifications regarding meeting updates, reminders, and other important information. Additionally, Chain Schedule incorporates an inbuilt push video feature, allowing users to conduct video conferences directly within the application, eliminating the need for external video conferencing tools.
 
-### `npm start`
+Moreover, Chain Schedule supports Ethereum Name Service (ENS) names and avatars, enhancing the user experience and personalization options. Users can easily associate their wallet addresses with ENS names and customize their avatars, creating a more identifiable and user-friendly environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Chain Schedule aims to provide a robust and decentralized scheduling solution . With its focus on wallet address integration, push chat notifications, push video capabilities, and support for ENS names and avatars, Chain Schedule revolutionizes the way users schedule and manage their appointments in a secure and convenient manner.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Features:
+-
+- Wallet Address Integration: Utilizes wallet addresses as the primary contact information for scheduling meetings.
+- Push Chat Notifications: Sends instant chat notifications for meeting updates, reminders, and important information.
+- Inbuilt Push Video: Enables video conferences directly within the application, eliminating the need for external tools.
+- Ethereum Name Service (ENS) Support: Integrates ENS names and avatars for enhanced user personalization.
+-User-Friendly Interface: Provides a simple and intuitive interface for easy scheduling and appointment management.
 
-### `npm test`
+Problem it solves:
+-
+Chain Schedule revolutionizes the way meetings and appointments are scheduled by offering a decentralized and secure solution. By leveraging wallet addresses as the primary contact information, it eliminates the need for tedious back-and-forth communication. With features like push chat notifications and push video conferencing, users can easily coordinate meetings and engage in seamless communication. The integration of Ethereum Name Service (ENS) names and avatars adds a personalized touch to the scheduling experience. With its user-friendly interface and compatibility with various devices, Chain Schedule simplifies the scheduling process, enhances collaboration, and ensures data privacy. It provides a hassle-free solution to the challenges faced by traditional scheduling methods, making it a valuable tool for efficient appointment management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Challenges faced:
+-
+As part of Challenges,
+- Understanding working of new feature of Push chat.
+- Struggled with react hooks.
+- Runtime error while deployment.
 
-### `npm run build`
+Although all errors are solved now, and the project is up and running.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Project Link:
+-
+[SuperChain Lottery](https://chain-schedule.netlify.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run Project:
+-
+To Run this project on your local system , follow the below steps:
+1) Clone the repo
+```
+git clone https://github.com/sumithprabhu/Chain_Schedule
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2) Install packages
+```
+npm install 
+```
 
-### `npm run eject`
+3) Run the code
+``` 
+npm start
+```
+5) The project is good to go 🚀
+.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+___
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![App Screenshot](https://github.com/sumithprabhu/Chain_Schedule/blob/main/src/images/Screenshot%202023-06-17%20125241.png)
 
-### Analyzing the Bundle Size
+                                                         
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![App Screenshot](https://github.com/sumithprabhu/Chain_Schedule/blob/main/src/images/Screenshot%202023-06-17%20125314.png)
 
-### Making a Progressive Web App
+                                                    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![App Screenshot](https://github.com/sumithprabhu/Chain_Schedule/blob/main/src/images/Screenshot%202023-06-17%20125328.png)
 
-### Advanced Configuration
+                                                    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![App Screenshot](https://github.com/sumithprabhu/Chain_Schedule/blob/main/src/images/Screenshot%202023-06-17%20130024.png)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-Plan:
+                                                    
