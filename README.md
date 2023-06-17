@@ -1,5 +1,5 @@
 
-# SuperChain Lottery
+# Chain Schedule
 
 Chain Schedule is an innovative decentralized application (DApp) designed to simplify scheduling meetings and appointments. Chain Schedule offers a unique twist by leveraging wallet addresses as the primary source of contact. By integrating blockchain technology, Chain Schedule ensures secure and transparent communication between users.
 
