@@ -74,8 +74,8 @@ const App = () => {
 
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 5) {
-      window.alert("Change the network to 5ire");
-      throw new Error("Change network to 5ire");
+      window.alert("Change the network to Goerli");
+      throw new Error("Change network to Goerli");
     }
 
     if (needSigner) {
